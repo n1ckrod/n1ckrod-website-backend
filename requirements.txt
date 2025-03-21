@@ -3,5 +3,4 @@ flask-cors
 flask-jwt-extended
 pandas
 werkzeug
-sqlite3
 gunicorn
