@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 from flask_jwt_extended import JWTManager
 from flask_cors import CORS
 import os
@@ -10,6 +10,10 @@ from datetime import timedelta
 
 app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins": "*"}})
+
+@app.route('/api/status', methods=['GET'])
+def status():
+    return jsonify({"message": "Server is running"}), 200
 
 # Secure JWT Configuration
 app.config['JWT_SECRET_KEY'] = 'your-secret-key'  # Change this!
