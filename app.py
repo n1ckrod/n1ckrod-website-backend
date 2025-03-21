@@ -5,6 +5,8 @@ import os
 from routes.auth import auth_bp
 from routes.csv_processor import csv_bp
 from database import init_db
+from datetime import timedelta
+
 
 app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins": "*"}})
@@ -26,4 +28,4 @@ if not os.path.exists('uploads'):
 init_db()
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000)
