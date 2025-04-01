@@ -35,6 +35,19 @@ for directory in ['uploads', 'static']:
     if not os.path.exists(directory):
         os.makedirs(directory)
 
+@app.route('/', methods=['GET'])
+def home():
+    return jsonify({
+        "message": "Portfolio Backend API",
+        "status": "running",
+        "endpoints": [
+            "/api/status",
+            "/api/projects",
+            "/api/contact",
+            "/api/resume"
+        ]
+    })
+
 @app.route('/api/status', methods=['GET'])
 def status():
     return jsonify({"message": "Server is running"}), 200
