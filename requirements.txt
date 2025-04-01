@@ -4,3 +4,4 @@ flask-jwt-extended
 pandas
 werkzeug
 gunicorn
+python-dotenv

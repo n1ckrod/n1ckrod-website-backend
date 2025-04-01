@@ -1,0 +1,13 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Portfolio Website",
+      "description": "A modern portfolio website built with React and Flask",
+      "image": "portfolio.jpg",
+      "github": "https://github.com/yourusername/portfolio",
+      "live": "https://yourportfolio.com",
+      "techStack": ["React", "Flask", "Tailwind CSS", "Python"]
+    }
+  ]
+} 
